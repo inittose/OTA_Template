@@ -42,12 +42,13 @@ namespace MQTT
 
     void print(const char *message)
     {
+        Serial.println(message);
         client.publish(topic_debug, message);
     }
 
     void print(const String& message)
     {
-        client.publish(topic_debug, message.c_str());
+        print(message.c_str());
     }
 
     void send(const char *topic, const JsonDocument& doc)
