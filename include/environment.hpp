@@ -29,5 +29,6 @@ namespace ENV
     extern const int mqtt_port;
 
     /// @brief Пароль обновления прошивки через OTA (по-умолчанию без пароля).
+    /// @details После выставления пароля, не забудьте указать его в platformio.ini -> upload_flags.
     extern const char *ota_password;
 } // namespace ENV

@@ -26,3 +26,16 @@ MQTT::send("esp32/data", doc)
 //     "Value": "someValue"
 // }
 ```
+
+
+## Безопасный OTA с паролем
+
+Установить пароль можно в файле переменных среды `environment.cpp`, по-умолчанию без пароля:
+```cpp
+const char *ota_password = "yourPassword";
+```
+
+Чтобы можно было прошить микроконтроллер удалено, укажите установленный пароль в файле `platformio.ini`:
+```ini
+upload_flags = --auth=yourPassword
+```
