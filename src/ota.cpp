@@ -23,6 +23,7 @@ namespace OTA
             Serial.printf("Error[%u]: ", error);
         });
 
+        ArduinoOTA.setPassword(ENV::ota_password);
         ArduinoOTA.begin();
     }
 
